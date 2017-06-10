@@ -333,6 +333,27 @@ void BitcoinGUI::createActions()
 	
 	charityAction = new QAction(QIcon(":/icons/multisend"), tr("&MultiSend"), this);
     charityAction->setToolTip(tr("MultiSend Settings"));
+	
+	resourcesMARAction = new QAction(QIcon(":/icons/web-main"), tr("&Marijuanacoin.net"), this);
+	resourcesMARAction->setToolTip(tr("Visit the Official Marijuanacoin website"));
+	resourcesCHAINAction = new QAction(QIcon(":/icons/web-chain"), tr("&Blockchain Explorer"), this);
+	resourcesCHAINAction->setToolTip(tr("Visit the Official Marijuanacoin Blockchain Explorer"));		
+	resourcesONLINEWALLETAction = new QAction(QIcon(":/icons/web-wallet"), tr("&Online Wallet"), this);
+	resourcesONLINEWALLETAction->setToolTip(tr("Get your own Online Wallet!"));	
+	resourcesSTATSAction = new QAction(QIcon(":/icons/web-stats"), tr("&Statistics"), this);
+	resourcesSTATSAction->setToolTip(tr("View the latest Marijuanacoin network and market statistics!"));
+    resourcesCHARTSAction = new QAction(QIcon(":/icons/web-charts"), tr("&Charts"), this);
+	resourcesCHARTSAction->setToolTip(tr("View the latest Marijuanacoin network charts!"));		
+	resourcesTWITTERAction = new QAction(QIcon(":/icons/web-twitter"), tr("&Twitter"), this);
+	resourcesTWITTERAction->setToolTip(tr("Visit the Official Marijuanacoin Twitter"));
+	resourcesBTCTAction = new QAction(QIcon(":/icons/web-btct"), tr("&Discussion Forum"), this);
+	resourcesBTCTAction->setToolTip(tr("Visit the Marijuanacoin discussion forum on bitcointalk.org"));
+	resourcesTOPIAAction = new QAction(QIcon(":/icons/web-topia"), tr("&Cryptopia Exchange"), this);
+	resourcesTOPIAAction->setToolTip(tr("Visit Cryptopia to buy or sell Marijuanacoins!"));
+	resourcesCMCAction = new QAction(QIcon(":/icons/web-cmc"), tr("&Coinmarketcap"), this);
+	resourcesCMCAction->setToolTip(tr("Visit coinmarketcap to see the latest market activity and total market capacity!"));
+	
+	
 
     connect(quitAction, SIGNAL(triggered()), qApp, SLOT(quit()));
     connect(aboutAction, SIGNAL(triggered()), this, SLOT(aboutClicked()));
@@ -351,6 +372,16 @@ void BitcoinGUI::createActions()
 	connect(statisticsAction, SIGNAL(triggered()), this, SLOT(gotoStatisticsPage()));
     connect(blockAction, SIGNAL(triggered()), this, SLOT(gotoBlockBrowser()));
 	connect(stakeReportAction, SIGNAL(triggered()), this, SLOT(stakeReportClicked()));
+	connect(resourcesMARAction, SIGNAL(triggered()), this, SLOT(resourcesMARClicked()));
+	connect(resourcesCHAINAction, SIGNAL(triggered()), this, SLOT(resourcesCHAINClicked()));
+	connect(resourcesONLINEWALLETAction, SIGNAL(triggered()), this, SLOT(resourcesONLINEWALLETClicked()));
+	connect(resourcesSTATSAction, SIGNAL(triggered()), this, SLOT(resourcesSTATSClicked()));
+	connect(resourcesCHARTSAction, SIGNAL(triggered()), this, SLOT(resourcesCHARTSClicked()));
+	connect(resourcesTWITTERAction, SIGNAL(triggered()), this, SLOT(resourcesTWITTERClicked()));		
+	connect(resourcesBTCTAction, SIGNAL(triggered()), this, SLOT(resourcesBTCTClicked()));
+	connect(resourcesTOPIAAction, SIGNAL(triggered()), this, SLOT(resourcesTOPIAClicked()));		
+	connect(resourcesCMCAction, SIGNAL(triggered()), this, SLOT(resourcesCMCClicked()));
+
 }
 
 void BitcoinGUI::createMenuBar()
@@ -389,6 +420,21 @@ void BitcoinGUI::createMenuBar()
     help->addSeparator();
     help->addAction(aboutAction);
     help->addAction(aboutQtAction);
+	
+	QMenu *resources = appMenuBar->addMenu(tr("&Resources"));
+
+    resources->addAction(resourcesMARAction);
+    resources->addAction(resourcesCHAINAction);
+	resources->addAction(resourcesONLINEWALLETAction);
+	resources->addAction(resourcesSTATSAction);
+	resources->addAction(resourcesCHARTSAction);
+    resources->addSeparator();	
+    resources->addAction(resourcesTWITTERAction);
+    resources->addAction(resourcesBTCTAction);
+    resources->addSeparator();	
+    resources->addAction(resourcesTOPIAAction);	
+	resources->addAction(resourcesCMCAction);		
+    resources->addSeparator();
 	
 }
 
@@ -579,6 +625,51 @@ void BitcoinGUI::stakeReportClicked()
    static StakeReportDialog dlg;
    dlg.setModel(walletModel);
    dlg.show();
+}
+
+void BitcoinGUI::resourcesMARClicked()
+{
+     QDesktopServices::openUrl(QUrl("https://marijuanacoin.net/"));
+}
+
+void BitcoinGUI::resourcesCHAINClicked()
+{
+     QDesktopServices::openUrl(QUrl("http://blockchain.marijuanacoin.net/"));
+}
+
+void BitcoinGUI::resourcesONLINEWALLETClicked()
+{
+     QDesktopServices::openUrl(QUrl("https://marijuanacoin.net/wallet"));
+}
+
+void BitcoinGUI::resourcesSTATSClicked()
+{
+     QDesktopServices::openUrl(QUrl("https://marijuanacoin.net/stats"));
+}
+
+void BitcoinGUI::resourcesCHARTSClicked()
+{
+     QDesktopServices::openUrl(QUrl("https://marijuanacoin.net/charts"));
+}
+
+void BitcoinGUI::resourcesTWITTERClicked()
+{
+     QDesktopServices::openUrl(QUrl("https://twitter.com/marijuanacoins"));
+}
+
+void BitcoinGUI::resourcesBTCTClicked()
+{
+     QDesktopServices::openUrl(QUrl("https://bitcointalk.org/index.php?topic=1928913.0"));
+}
+
+void BitcoinGUI::resourcesTOPIAClicked()
+{
+     QDesktopServices::openUrl(QUrl("https://www.cryptopia.co.nz/Exchange?market=MAR_BTC"));
+}
+
+void BitcoinGUI::resourcesCMCClicked()
+{
+     QDesktopServices::openUrl(QUrl("http://coinmarketcap.com/currencies/marijuanacoin/"));
 }
 
 void BitcoinGUI::setNumConnections(int count)

@@ -91,7 +91,7 @@
         <cursorShape>IBeamCursor</cursorShape>
        </property>
        <property name="text">
-        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Copyright © 2009-2015 The Bitcoin developers&lt;br/&gt;Copyright © 2012-2016 The NovaCoin developers&lt;br/&gt;Copyright © 2016-2017 The Marijuanacoin developers&lt;br/&gt;&lt;br/&gt;Website: &lt;a href=&quot;https://www.marijuanacoin.org&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#dfdfdf;&quot;&gt;https://www.marijuanacoin.org&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Copyright © 2009-2017 The Bitcoin developers&lt;br/&gt;Copyright © 2012-2017 The NovaCoin developers&lt;br/&gt;Copyright © 2016-2017 The Marijuanacoin developers&lt;br/&gt;&lt;br/&gt;Website: &lt;a href=&quot;https://www.marijuanacoin.net&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#dfdfdf;&quot;&gt;https://www.marijuanacoin.net&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
        </property>
        <property name="textFormat">
         <enum>Qt::RichText</enum>

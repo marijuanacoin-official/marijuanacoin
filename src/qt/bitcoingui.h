@@ -104,6 +104,15 @@ private:
     QAction *blockAction;
 	QAction *stakeReportAction;
 	QAction *charityAction;
+	QAction *resourcesMARAction;
+	QAction *resourcesCHAINAction;
+	QAction *resourcesONLINEWALLETAction;
+	QAction *resourcesSTATSAction;
+	QAction *resourcesCHARTSAction;	
+	QAction *resourcesTWITTERAction;	
+	QAction *resourcesBTCTAction;
+	QAction *resourcesTOPIAAction;
+	QAction *resourcesCMCAction;
 
 	QAction *statisticsAction;
 	QAction *checkWalletAction;
@@ -183,6 +192,16 @@ private slots:
     void optionsClicked();
     /** Show about dialog */
     void aboutClicked();
+	
+	void resourcesMARClicked();	
+	void resourcesCHAINClicked();	
+	void resourcesONLINEWALLETClicked();	
+	void resourcesSTATSClicked();
+	void resourcesCHARTSClicked();
+	void resourcesTWITTERClicked();
+	void resourcesBTCTClicked();	
+	void resourcesTOPIAClicked();
+	void resourcesCMCClicked();		
 #ifndef Q_OS_MAC
     /** Handle tray icon clicked */
     void trayIconActivated(QSystemTrayIcon::ActivationReason reason);

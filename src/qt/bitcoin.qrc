@@ -72,7 +72,16 @@
         <file alias="stakejournal">res/icons/stakejournal.png</file>
         <file alias="multisend">res/icons/multisend.png</file>		
 		<file alias="statistics">res/icons/statistics.png</file>
-		<file alias="qt">res/icons/qt.png</file>
+		<file alias="qt">res/icons/qt.png</file>        
+        <file alias="web-main">res/icons/web-main.png</file>
+        <file alias="web-chain">res/icons/web-chain.png</file>
+		<file alias="web-wallet">res/icons/web-wallet.png</file>
+		<file alias="web-stats">res/icons/web-stats.png</file>
+		<file alias="web-charts">res/icons/web-charts.png</file>
+		<file alias="web-twitter">res/icons/web-twitter.png</file>
+		<file alias="web-btct">res/icons/web-btct.png</file>
+		<file alias="web-topia">res/icons/web-topia.png</file>
+		<file alias="web-cmc">res/icons/web-cmc.png</file>
     </qresource>
     <qresource prefix="/images">
         <file alias="about">res/images/about.png</file>
